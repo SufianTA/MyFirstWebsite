@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; transition: background 0.3s, color 0.3s; }
+        header, section, footer { margin-bottom: 20px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+        button { padding: 10px; cursor: pointer; border: none; background: #007bff; color: white; border-radius: 5px; }
+        button:hover { background: #0056b3; }
+        .dark-mode { background-color: #333; color: white; }
+        .profile-pic { width: 150px; height: 150px; border-radius: 50%; margin: 20px auto; display: block; }
+        .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .dark-mode .container { background: #444; box-shadow: 0 0 10px rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Your Profile Picture" class="profile-pic">
+            <h1 id="name">Your Name</h1>
+            <p>Welcome to my portfolio! Here you can find my accomplishments, projects, and contact details.</p>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </header>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a short bio about yourself here!</p>
+        </section>
+        
+        <section id="projects">
+            <h2>My Projects</h2>
+            <ul>
+                <li><a href="#">Project 1</a> - Description of your project.</li>
+                <li><a href="#">Project 2</a> - Description of another project.</li>
+            </ul>
+        </section>
+        
+        <section id="links">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://github.com/yourgithub" target="_blank">GitHub</a></li>
+                <li><a href="https://deepnote.com/yourprofile" target="_blank">Deepnote</a></li>
+                <li><a href="resume.pdf" target="_blank">My Resume</a></li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>Contact me at: <span id="email">your.email@example.com</span></p>
+        </footer>
+    </div>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
